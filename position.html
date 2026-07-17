@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Position in Tailwind</title>
+</head>
+
+<body>
+    <h1 class="text-3xl font-bold bg-blue-300 text-center">Position in Tailwind</h1>
+    <div class="bg-red-200 size-20 absolute bottom-0 right-0">This is a red box.</div>
+    <div class="bg-blue-200 size-20 absolute top-0 right-0">This is a red box.</div>
+    <div class="bg-green-200 size-20 absolute bottom-0 left-0">This is a red box.</div>
+    <div class="bg-yellow-200 size-20 absolute top-0 left-0">This is a red box.</div>
+    <div class="bg-purple-700 size-70 z-1 m-auto relative">
+        <h1 class="bg-pink-200 fixed ">This is div with position relative and h1 position is fixed</h1>
+    </div>
+    <div class="bg-gradient-to-r from-blue-500/50 to-purple-500/50 size-80 relative m-auto mt-10">
+        <div class="bg-red-200 size-20 absolute bottom-0 right-0">This is a red box.</div>
+        <div class="bg-blue-200 size-20 absolute top-0 right-0">This is a red box.</div>
+        <div class="bg-green-200 size-20 absolute bottom-0 left-0">This is a red box.</div>
+        <div class="bg-yellow-200 size-20 absolute top-0 left-0">This is a red box.</div>
+    </div>
+
+</body>
+
+</html>
