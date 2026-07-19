@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" id="root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dark mode with button</title>
+    <script>
+        function toggleDarkMode() {
+            let el = document.getElementById('root');
+            if (el.className == "dark") {
+                document.getElementById('root').className = ""
+                return
+            }
+            else {
+                document.getElementById('root').className = "dark"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button
+        class="bg-blue-300 hover:bg-blue-500 transition scale-75 duration-1000 rounded ml-10 mt-5 h-10 w-30 border border-blue-600 shadow-blue-300 shadow-xl"
+        onclick="toggleDarkMode()">Change Mode</button>
+    <div class="dark:bg-slate-800">
+        <h1 class="text-3xl dark:text-white">My App</h1>
+        <p class="dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, officia.</p>
+    </div>
+    <div class="flex border border-gray-300 mt-5 dark:bg-slate-800">
+        <div class="bg-gray-300 dark:bg-gray-600 p-4 m-2">Box 1</div>
+        <div class="dark:text-white">This is a box</div>
+    </div>
+</body>
+
+</html>
