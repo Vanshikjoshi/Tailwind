@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@theme{
+
+/*@theme{
     --breakpoint-sm: 500px;
     --breakpoint-vs: 400px;
-}
+}*/
+/*@custom-variant dark (&:where(.dark, .dark *));*/
