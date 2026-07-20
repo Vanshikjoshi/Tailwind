@@ -22,6 +22,7 @@
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-amber-600: oklch(66.6% 0.179 58.318);
@@ -61,7 +62,6 @@
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -291,6 +291,9 @@
   .m-2 {
     margin: calc(var(--spacing) * 2);
   }
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
   .m-10 {
     margin: calc(var(--spacing) * 10);
   }
@@ -342,9 +345,6 @@
   .grid {
     display: grid;
   }
-  .table {
-    display: table;
-  }
   .size-10 {
     width: calc(var(--spacing) * 10);
     height: calc(var(--spacing) * 10);
@@ -381,9 +381,6 @@
     width: 100%;
     height: 100%;
   }
-  .h-1 {
-    height: var(--spacing);
-  }
   .h-1\/3 {
     height: calc(1 / 3 * 100%);
   }
@@ -416,9 +413,6 @@
   }
   .min-h-10 {
     min-height: calc(var(--spacing) * 10);
-  }
-  .w-1 {
-    width: var(--spacing);
   }
   .w-1\/2 {
     width: calc(1 / 2 * 100%);
@@ -459,17 +453,11 @@
   .min-w-100 {
     min-width: calc(var(--spacing) * 100);
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .scale-75 {
     --tw-scale-x: 75%;
     --tw-scale-y: 75%;
     --tw-scale-z: 75%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .animate-bounce {
     animation: var(--animate-bounce);
@@ -482,9 +470,6 @@
   }
   .animate-spin {
     animation: var(--animate-spin);
-  }
-  .resize {
-    resize: both;
   }
   .columns-3xs {
     columns: var(--container-3xs);
@@ -531,6 +516,9 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-amber-300 {
+    border-color: var(--color-amber-300);
   }
   .border-blue-600 {
     border-color: var(--color-blue-600);
@@ -690,10 +678,6 @@
     --tw-gradient-from: var(--color-blue-200);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-blue-500 {
-    --tw-gradient-from: var(--color-blue-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .from-blue-500\/50 {
     --tw-gradient-from: color-mix(in srgb, oklch(62.3% 0.214 259.815) 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -726,10 +710,6 @@
   }
   .to-orange-500 {
     --tw-gradient-to: var(--color-orange-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-pink-500 {
-    --tw-gradient-to: var(--color-pink-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-pink-500\/50 {
@@ -809,9 +789,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -845,10 +822,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-pink-500) var(--tw-shadow-alpha), transparent);
     }
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .blur {
     --tw-blur: blur(8px);
@@ -942,9 +915,6 @@
     --tw-invert: invert(100%);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-  .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -972,6 +942,9 @@
     }
     .hover\:rotate-360:hover {
       rotate: 360deg;
+    }
+    .hover\:bg-blue-400:hover {
+      background-color: var(--color-blue-400);
     }
     .hover\:bg-blue-500:hover {
       background-color: var(--color-blue-500);
@@ -1076,14 +1049,32 @@
   .dark\:bg-gray-600:where(.dark, .dark *) {
     background-color: var(--color-gray-600);
   }
-  .dark\:bg-gray-800:where(.dark, .dark *) {
-    background-color: var(--color-gray-800);
-  }
   .dark\:bg-slate-800:where(.dark, .dark *) {
     background-color: var(--color-slate-800);
   }
   .dark\:text-white:where(.dark, .dark *) {
     color: var(--color-white);
+  }
+}
+@layer components {
+  .btn-primary {
+    border-radius: 0.25rem;
+    background-color: var(--color-blue-500);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-700);
+      }
+    }
   }
 }
 @property --tw-scale-x {
@@ -1100,26 +1091,6 @@
   syntax: "*";
   inherits: false;
   initial-value: 1;
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -1237,11 +1208,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1331,11 +1297,6 @@
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
@@ -1361,7 +1322,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

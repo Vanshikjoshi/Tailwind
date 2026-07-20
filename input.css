@@ -5,3 +5,8 @@
     --breakpoint-vs: 400px;
 }*/
 @custom-variant dark (&:where(.dark, .dark *));
+@layer components{
+    .btn-primary{
+        @apply bg-blue-500 text-white transition duration-500 font-bold py-2 px-4 rounded hover:bg-blue-700;
+    }/*cuastom button*/
+}
