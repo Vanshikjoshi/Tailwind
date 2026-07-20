@@ -53,6 +53,7 @@
     --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-violet-500: oklch(60.6% 0.25 292.717);
     --color-purple-200: oklch(90.2% 0.063 306.703);
+    --color-purple-300: oklch(82.7% 0.119 306.383);
     --color-purple-400: oklch(71.4% 0.203 305.504);
     --color-purple-500: oklch(62.7% 0.265 303.9);
     --color-purple-600: oklch(55.8% 0.288 302.321);
@@ -84,11 +85,8 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-9xl: 8rem;
-    --text-9xl--line-height: 1;
     --font-weight-thin: 100;
     --font-weight-extralight: 200;
-    --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
@@ -352,9 +350,6 @@
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
   }
-  .ml-5 {
-    margin-left: calc(var(--spacing) * 5);
-  }
   .ml-10 {
     margin-left: calc(var(--spacing) * 10);
   }
@@ -366,6 +361,9 @@
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -513,6 +511,9 @@
   }
   .animate-spin {
     animation: var(--animate-spin);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -717,6 +718,9 @@
   .bg-pink-400 {
     background-color: var(--color-pink-400);
   }
+  .bg-purple-300 {
+    background-color: var(--color-purple-300);
+  }
   .bg-purple-500 {
     background-color: var(--color-purple-500);
   }
@@ -858,6 +862,9 @@
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
+  .p-1 {
+    padding: var(--spacing);
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -940,6 +947,9 @@
   .font-thin {
     --tw-font-weight: var(--font-weight-thin);
     font-weight: var(--font-weight-thin);
+  }
+  .text-blue-500 {
+    color: var(--color-blue-500);
   }
   .text-white {
     color: var(--color-white);
@@ -1103,11 +1113,8 @@
     transition-duration: 2000ms;
   }
   @media (hover: hover) {
-    .hover\:scale-75:hover {
-      --tw-scale-x: 75%;
-      --tw-scale-y: 75%;
-      --tw-scale-z: 75%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
+    .group-hover\:block:is(:where(.group):hover *) {
+      display: block;
     }
     .hover\:scale-105:hover {
       --tw-scale-x: 105%;
@@ -1139,12 +1146,11 @@
     .hover\:bg-pink-600:hover {
       background-color: var(--color-pink-600);
     }
+    .hover\:text-blue-700:hover {
+      color: var(--color-blue-700);
+    }
     .hover\:opacity-5:hover {
       opacity: 5%;
-    }
-    .hover\:shadow-2xl:hover {
-      --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
     .hover\:shadow-xl:hover {
       --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -1158,24 +1164,8 @@
         --tw-shadow-color: color-mix(in oklab, var(--color-yellow-100) var(--tw-shadow-alpha), transparent);
       }
     }
-    .hover\:shadow-yellow-200:hover {
-      --tw-shadow-color: oklch(94.5% 0.129 101.54);
-    }
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:shadow-yellow-200:hover {
-        --tw-shadow-color: color-mix(in oklab, var(--color-yellow-200) var(--tw-shadow-alpha), transparent);
-      }
-    }
-    .hover\:brightness-105:hover {
-      --tw-brightness: brightness(105%);
-      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-    }
     .hover\:brightness-110:hover {
       --tw-brightness: brightness(110%);
-      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-    }
-    .hover\:brightness-125:hover {
-      --tw-brightness: brightness(125%);
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
     }
   }
